@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button/Button";
 import Heading from "@/components/ui/Heading/Heading";
 import Image from "next/image";
+
 import {
   useIsLoadingMinifigs,
   useMinifigsStore,
@@ -22,7 +23,7 @@ const WelcomeStep = () => {
         text="lego minifigs mystery box"
         variant={"heading1"}
         level={1}
-        classes="my-4 text-center"
+        classes="my-4 text-center text-white"
       />
       <Button
         label={isLoading ? "Spinning the wheel" : "Let`s go!"}

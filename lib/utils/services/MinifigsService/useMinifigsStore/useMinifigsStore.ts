@@ -11,18 +11,28 @@ export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
       isLoading: true,
     });
     const { data } = await MinifigsService.getMiniFigs();
-
-    console.log(data);
-
     set({
       isLoading: false,
-      minifigs: data.results,
+      minifigs: data.results
+        .sort(() => Math.random() - Math.random())
+        .slice(0, 3),
     });
   },
   getMinifigParts: async (set_num: string) => {
-    const data = await MinifigsService.getParts(set_num);
     set({
+      isLoading: true,
+    });
+
+    const data = await MinifigsService.getParts(set_num);
+
+    set({
+      isLoading: false,
       selectedMinifigParts: data.data.results,
+    });
+  },
+  onMinifigSelect: (minifig: Minifig) => {
+    set({
+      selectedMinifig: minifig,
     });
   },
   setCurrentStep: (step: FormSteps) => {
@@ -48,6 +58,4 @@ export const useCurrentStep = (): FormSteps =>
   useMinifigsStore((state) => state.currentStep);
 
 export const useRandomMinifigs = (): Minifig[] =>
-  useMinifigsStore((state) =>
-    state.minifigs.sort(() => Math.random() - Math.random()).slice(0, 3),
-  );
+  useMinifigsStore((state) => state.minifigs);

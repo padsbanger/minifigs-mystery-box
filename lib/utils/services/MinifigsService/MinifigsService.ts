@@ -4,12 +4,12 @@ import {
   MinifigPartsResponse,
   MinifigsResponse,
 } from "./MinifigsService.types";
+import { HARRY_POTTER_THEME_ID } from "./MinifigsService.consts";
 
 export const MinifigsService = {
   async getMiniFigs(): Promise<AxiosResponse<MinifigsResponse>> {
     const client = createHttpClient();
-    return await client.get("/minifigs/?in_theme_id=710");
-    // return await client.get("/themes?page=5");
+    return await client.get(`/minifigs/?in_theme_id=${HARRY_POTTER_THEME_ID}`);
   },
 
   async getParts(

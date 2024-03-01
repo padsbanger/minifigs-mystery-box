@@ -9,4 +9,5 @@ export type MinifigsStore = {
   getMinifigs: () => Promise<void>;
   getMinifigParts: (set_num: string) => Promise<void>;
   setCurrentStep: (step: FormSteps) => void;
+  onMinifigSelect: (minifig: Minifig) => void;
 };

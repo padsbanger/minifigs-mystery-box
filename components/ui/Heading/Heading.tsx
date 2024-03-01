@@ -15,8 +15,7 @@ const classMap: ClassMap = {
   heading10: "text-headline-10 font-700 leading-[145%]",
 };
 
-const commonClasses =
-  "font-plus-jakarta-sans leading-normal uppercase text-white";
+const commonClasses = "font-plus-jakarta-sans leading-normal uppercase";
 
 const Heading = ({ classes, variant, level, text }: HeadingProps) => {
   const Tag: keyof JSX.IntrinsicElements = `h${level}`;

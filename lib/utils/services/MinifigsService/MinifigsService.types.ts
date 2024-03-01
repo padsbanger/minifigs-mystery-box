@@ -1,7 +1,7 @@
 export type FormSteps = "WELCOME" | "CHOOSE" | "SHIPPING";
 
 export type Minifig = {
-  set_num: number;
+  set_num: string;
   name: string;
   num_parts: number;
   set_img_url: string;
