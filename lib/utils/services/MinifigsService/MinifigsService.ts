@@ -8,7 +8,8 @@ import {
 export const MinifigsService = {
   async getMiniFigs(): Promise<AxiosResponse<MinifigsResponse>> {
     const client = createHttpClient();
-    return await client.get("/minifigs/?search=potter");
+    return await client.get("/minifigs/?in_theme_id=710");
+    // return await client.get("/themes?page=5");
   },
 
   async getParts(

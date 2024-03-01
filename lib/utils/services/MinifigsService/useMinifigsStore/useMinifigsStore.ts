@@ -12,6 +12,8 @@ export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
     });
     const { data } = await MinifigsService.getMiniFigs();
 
+    console.log(data);
+
     set({
       isLoading: false,
       minifigs: data.results,
