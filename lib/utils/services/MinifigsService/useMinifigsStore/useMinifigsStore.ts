@@ -5,6 +5,7 @@ import { MinifigsService } from "../MinifigsService";
 import { FormSteps, Minifig, MinifigPart } from "../MinifigsService.types";
 import { MinifigsStore } from "./useMinifigsStore.types";
 import { ShippingFormValues } from "@/components/formSteps/ShippingStep/ShippingStep.types";
+import debounce from "@/lib/utils/debounce";
 
 export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
   getMinifigs: async () => {
@@ -25,11 +26,13 @@ export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
     });
 
     const data = await MinifigsService.getParts(set_num);
-
-    set({
-      isLoading: false,
-      selectedMinifigParts: data.data.results,
-    });
+    const debounceSet = debounce(() => {
+      set({
+        isLoading: false,
+        selectedMinifigParts: data.data.results,
+      });
+    }, 1500);
+    debounceSet();
   },
   onMinifigSelect: (minifig: Minifig) => {
     set({

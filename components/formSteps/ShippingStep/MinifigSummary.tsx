@@ -23,7 +23,6 @@ const MinifigSummary = ({
   handleSubmit,
   isSubmitting,
 }: MinifigSummaryProps) => {
-  const setCurrentStep = useMinifigsStore.getState().setCurrentStep;
   const getMinifigParts = useMinifigsStore.getState().getMinifigParts;
   const isLoading = useIsLoadingMinifigs();
   const selectedMinifig = useSelectedMinifig();
@@ -38,8 +37,8 @@ const MinifigSummary = ({
   return (
     <div
       className={clsx(
-        "flex flex-col bg-white shadow-md rounded-md basis-1/3 p-4 h-[calc(100vh-20rem)] overflow-auto",
-        { "opacity-70": isSubmitting },
+        "flex flex-col bg-white shadow-md rounded-md basis-1/3 p-4 h-[calc(100vh-20rem)] min-w-[320px] overflow-auto",
+        { "opacity-70": isSubmitting || isLoading },
       )}
     >
       <Heading
@@ -53,7 +52,7 @@ const MinifigSummary = ({
         alt={selectedMinifig?.name as string}
         width="180"
         height="120"
-        className="m-auto h-full object-cover my-4"
+        className="m-auto object-cover my-4 w-[180px]"
       />
       <Heading
         text={selectedMinifig?.name as string}
