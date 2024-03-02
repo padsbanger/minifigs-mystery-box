@@ -3,5 +3,6 @@ type ButtonProps = {
   onClick: () => void;
   type?: string;
   classes?: string;
-  disabled: boolean;
+  disabled?: boolean;
+  isLoading?: boolean;
 };

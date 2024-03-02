@@ -18,32 +18,36 @@ const WelcomeStep = () => {
   };
 
   return (
-    <div className="flex flex-col items-center relative">
-      <Heading
-        text="lego minifigs mystery box"
-        variant={"heading1"}
-        level={1}
-        classes="my-4 text-center text-white"
-      />
-      <Button
-        label={isLoading ? "Spinning the wheel" : "Let`s go!"}
-        disabled={isLoading}
-        onClick={handleStart}
-      />
-      <Image
-        src={"/question-mark.svg"}
-        alt="question-mark"
-        className="absolute -top-20 -left-20 -rotate-[5deg]"
-        width={64}
-        height={64}
-      />
-      <Image
-        src={"/question-mark.svg"}
-        alt="question-mark"
-        className="absolute -bottom-20 -right-20 rotate-[25deg]"
-        width={48}
-        height={48}
-      />
+    <div className="flex flex-col items-center h-screen justify-center">
+      <div className="relative">
+        <Image
+          src={"/question-mark.svg"}
+          alt="question-mark"
+          className="absolute -top-20 -left-20 -rotate-[5deg]"
+          width={64}
+          height={64}
+        />
+        <Image
+          src={"/question-mark.svg"}
+          alt="question-mark"
+          className="absolute -bottom-20 -right-20 rotate-[25deg]"
+          width={48}
+          height={48}
+        />
+        <Heading
+          text="lego minifigs mystery box"
+          variant={"heading1"}
+          level={1}
+          classes="my-4 text-center text-white"
+        />
+        <Button
+          label={"Let`s go!"}
+          disabled={isLoading}
+          isLoading={isLoading}
+          onClick={handleStart}
+          classes="flex m-auto"
+        />
+      </div>
     </div>
   );
 };

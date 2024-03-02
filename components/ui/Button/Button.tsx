@@ -1,12 +1,12 @@
 import clsx from "clsx";
-import { ButtonHTMLAttributes } from "react";
+import Spinner from "../Spinner/Spinner";
 
 const Button = ({
   label,
   onClick,
-  type = "button",
   classes,
   disabled,
+  isLoading,
 }: ButtonProps) => {
   return (
     <button
@@ -17,7 +17,11 @@ const Button = ({
       )}
       onClick={onClick}
     >
-      <span className="uppercase font-plus-jakarta-sans">{label}</span>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <span className="uppercase font-plus-jakarta-sans">{label}</span>
+      )}
     </button>
   );
 };

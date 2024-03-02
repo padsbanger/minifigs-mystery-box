@@ -10,8 +10,10 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
     "axios": "^1.6.7",
     "clsx": "^2.1.0",
+    "date-fns": "^3.3.1",
     "husky": "^9.0.11",
     "next": "14.1.0",
     "react": "^18",

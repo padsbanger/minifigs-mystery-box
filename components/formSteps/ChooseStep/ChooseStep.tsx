@@ -15,7 +15,7 @@ const ChooseStep = () => {
   const selectMinifig = useMinifigsStore.getState().onMinifigSelect;
 
   return (
-    <div>
+    <div className="flex flex-col h-screen justify-center">
       <Heading
         text="Choose your minifig"
         variant={"heading3"}

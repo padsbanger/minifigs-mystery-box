@@ -4,7 +4,8 @@ import {
   MinifigPartsResponse,
   MinifigsResponse,
 } from "./MinifigsService.types";
-import { HARRY_POTTER_THEME_ID } from "./MinifigsService.consts";
+import { HARRY_POTTER_THEME_ID } from "./MinifigsService.const";
+import { ShippingFormValues } from "@/components/formSteps/ShippingStep/ShippingStep.types";
 
 export const MinifigsService = {
   async getMiniFigs(): Promise<AxiosResponse<MinifigsResponse>> {
@@ -19,7 +20,11 @@ export const MinifigsService = {
     return await client.get(`/minifigs/${set_num}/parts/`);
   },
 
-  async saveOrder(): Promise<any> {
-    return new Promise((resolve) => setTimeout(() => console.log("ok"), 1000));
+  async sendOrder(payload: ShippingFormValues): Promise<ShippingFormValues> {
+    return new Promise((resolve) =>
+      setTimeout(() => {
+        resolve(payload);
+      }, 1500),
+    );
   },
 };

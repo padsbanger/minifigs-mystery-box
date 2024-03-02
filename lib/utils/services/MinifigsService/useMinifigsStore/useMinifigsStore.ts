@@ -4,6 +4,7 @@ import { MinifigsService } from "../MinifigsService";
 
 import { FormSteps, Minifig, MinifigPart } from "../MinifigsService.types";
 import { MinifigsStore } from "./useMinifigsStore.types";
+import { ShippingFormValues } from "@/components/formSteps/ShippingStep/ShippingStep.types";
 
 export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
   getMinifigs: async () => {
@@ -38,7 +39,22 @@ export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
   setCurrentStep: (step: FormSteps) => {
     set({ currentStep: step });
   },
+  saveOrder: async (payload: ShippingFormValues) => {
+    set({
+      isSubmittingOrder: true,
+    });
+    MinifigsService.sendOrder(payload).then(() => {
+      set({
+        isSubmittingOrder: false,
+        minifigs: [],
+        selectedMinifig: null,
+        selectedMinifigParts: [],
+        currentStep: "WELCOME",
+      });
+    });
+  },
   isLoading: false,
+  isSubmittingOrder: false,
   minifigs: [],
   selectedMinifig: null,
   selectedMinifigParts: [],
@@ -47,6 +63,9 @@ export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
 
 export const useIsLoadingMinifigs = (): boolean =>
   Boolean(useMinifigsStore((state) => state.isLoading));
+
+export const useIsSubmittingOrder = (): boolean =>
+  Boolean(useMinifigsStore((state) => state.isSubmittingOrder));
 
 export const useSelectedMinifig = (): Minifig | null =>
   useMinifigsStore((state) => state.selectedMinifig);
