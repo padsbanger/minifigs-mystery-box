@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChooseStep View should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col h-auto md:h-screen justify-center"
+  >
+    <h3
+      class="font-plus-jakarta-sans leading-normal uppercase text-headline-3 font-700 leading-[130%] text-center text-white"
+    >
+      Choose your minifig
+    </h3>
+    <div
+      class="container mx-auto"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 my-32"
+      />
+      <div
+        class="flex justify-center"
+      >
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-6 px-12 rounded-md disabled:opacity-55 shadow-sm hover:shadow-xl transition-all active:shadow-2xl"
+          disabled=""
+        >
+          <span
+            class="uppercase font-plus-jakarta-sans"
+          >
+            Proceed to shipment!
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

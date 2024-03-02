@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingStep View should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col items-center md:h-screen h-auto justify-center"
+  >
+    <div
+      class="container mx-auto"
+    >
+      <form>
+        <div
+          class="flex flex-col md:flex-row gap-10"
+        >
+          <div
+            class="basis-2/3"
+          >
+            <h3
+              class="font-plus-jakarta-sans leading-normal uppercase text-headline-3 font-700 leading-[130%] my-4 text-white"
+            >
+              Shipping Details
+            </h3>
+            <div
+              class="grid grid-cols-2 gap-4"
+            >
+              <div
+                class="flex flex-col my-1"
+              >
+                <label
+                  class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                  for="firstName"
+                >
+                  First Name
+                </label>
+                <input
+                  class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Please provide your name"
+                />
+              </div>
+              <div
+                class="flex flex-col my-1"
+              >
+                <label
+                  class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                  for="surName"
+                >
+                  Surname
+                </label>
+                <input
+                  class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                  id="surName"
+                  name="surName"
+                  placeholder="Please provide your last name"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col my-1"
+            >
+              <label
+                class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                for="phoneNumber"
+              >
+                Phone number
+              </label>
+              <input
+                class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="Please provide your phone number"
+              />
+            </div>
+            <div
+              class="flex flex-col my-1"
+            >
+              <label
+                class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                id="email"
+                name="email"
+                placeholder="Please provide your email"
+              />
+            </div>
+            <div
+              class="flex flex-col my-1"
+            >
+              <label
+                class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                for="dateOfBirth"
+              >
+                Date of birth
+              </label>
+              <input
+                class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                placeholder="Please provide your date of birth"
+                type="date"
+              />
+            </div>
+            <div
+              class="flex flex-col my-1"
+            >
+              <label
+                class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                for="address"
+              >
+                Address
+              </label>
+              <input
+                class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                id="address"
+                name="address"
+                placeholder="Please provide your address"
+              />
+            </div>
+            <div
+              class="flex flex-col my-1"
+            >
+              <label
+                class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                for="city"
+              >
+                City
+              </label>
+              <input
+                class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                id="city"
+                name="city"
+                placeholder="Please provide your city"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 gap-4"
+            >
+              <div
+                class="flex flex-col my-1"
+              >
+                <label
+                  class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                  for="state"
+                >
+                  State
+                </label>
+                <input
+                  class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                  id="state"
+                  name="state"
+                  placeholder="Please provide your state"
+                />
+              </div>
+              <div
+                class="flex flex-col my-1"
+              >
+                <label
+                  class="font-plus-jakarta-sans cursor-pointer text-white my-1 p-1"
+                  for="zip"
+                >
+                  Zip Code
+                </label>
+                <input
+                  class="font-plus-jakarta-sans p-2 active:shadow-lg focus:shadow-lg rounded-lg outline-none transition-shadow"
+                  id="zip"
+                  name="zip"
+                  placeholder="Please provide your zip code"
+                  type="number"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col bg-white shadow-md rounded-md basis-1/3 p-4 h-[calc(100vh-20rem)] overflow-auto"
+          >
+            <h3
+              class="font-plus-jakarta-sans leading-normal uppercase text-headline-3 font-700 leading-[130%] my-4 text-black font-bold"
+            >
+              Summary
+            </h3>
+            <img
+              class="m-auto h-full object-cover my-4"
+              data-nimg="1"
+              decoding="async"
+              height="120"
+              src=""
+              style="color: transparent;"
+              width="180"
+            />
+            <h6
+              class="font-plus-jakarta-sans leading-normal uppercase text-headline-8 font-700 leading-[145%] my-4 text-black text-center font-bold"
+            />
+            <p
+              class="font-plus-jakarta-sans my-4"
+            >
+              There are 0 parts in this minifig:
+            </p>
+            <div
+              class="h-auto md:h-[calc(100vh-1rem)] overflow-auto"
+            />
+            <div>
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-6 px-12 rounded-md disabled:opacity-55 shadow-sm hover:shadow-xl transition-all active:shadow-2xl flex items-center h-10 mx-auto my-10"
+              >
+                <span
+                  class="uppercase font-plus-jakarta-sans"
+                >
+                  Submit
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

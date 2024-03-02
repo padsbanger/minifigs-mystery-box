@@ -15,7 +15,7 @@ const ChooseStep = () => {
   const selectMinifig = useMinifigsStore.getState().onMinifigSelect;
 
   return (
-    <div className="flex flex-col h-screen justify-center">
+    <div className="flex flex-col h-auto md:h-screen justify-center">
       <Heading
         text="Choose your minifig"
         variant={"heading3"}
@@ -23,7 +23,7 @@ const ChooseStep = () => {
         classes="text-center text-white"
       />
       <div className="container mx-auto">
-        <div className="grid grid-cols-3 gap-6 my-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-32">
           {minifigs.map((el: Minifig) => (
             <MinifigBox
               {...el}
