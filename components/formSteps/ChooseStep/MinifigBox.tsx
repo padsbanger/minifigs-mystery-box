@@ -21,7 +21,7 @@ const MinifigBox = ({
     <div
       onClick={onMinifigSelect}
       className={clsx(
-        "hover:bg-red bg-white rounded-lg shadow-md cursor-pointer hover:p-2 transition-all my-2 md:m-0",
+        "hover:bg-red bg-white rounded-lg shadow-md cursor-pointer hover:p-2 transition-all m-2 md:m-0",
         {
           "shadow-selectedMinifig": isActive,
         },
