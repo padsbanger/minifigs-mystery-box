@@ -10,7 +10,7 @@ exports[`WelcomeStep View should match snapshot 1`] = `
     >
       <img
         alt="question-mark"
-        class="absolute -top-20 -left-20 -rotate-[5deg]"
+        class="absolute md:-top-20 md:-left-20 -rotate-[5deg] -top-20 left-20"
         data-nimg="1"
         decoding="async"
         height="64"
@@ -21,7 +21,7 @@ exports[`WelcomeStep View should match snapshot 1`] = `
       />
       <img
         alt="question-mark"
-        class="absolute -bottom-20 -right-20 rotate-[25deg]"
+        class="absolute md:-bottom-20 md:-right-20 rotate-[25deg] -bottom-10 right-10"
         data-nimg="1"
         decoding="async"
         height="48"

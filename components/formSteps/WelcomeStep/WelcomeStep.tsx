@@ -23,14 +23,14 @@ const WelcomeStep = () => {
         <Image
           src={"/question-mark.svg"}
           alt="question-mark"
-          className="absolute -top-20 -left-20 -rotate-[5deg]"
+          className="absolute md:-top-20 md:-left-20 -rotate-[5deg] -top-20 left-20"
           width={64}
           height={64}
         />
         <Image
           src={"/question-mark.svg"}
           alt="question-mark"
-          className="absolute -bottom-20 -right-20 rotate-[25deg]"
+          className="absolute md:-bottom-20 md:-right-20 rotate-[25deg] -bottom-10 right-10"
           width={48}
           height={48}
         />
