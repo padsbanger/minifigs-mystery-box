@@ -3,7 +3,7 @@
 exports[`ChooseStep View should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="flex flex-col h-auto md:h-screen justify-center"
+    class="flex flex-col md:h-screen h-auto justify-center"
   >
     <h3
       class="font-plus-jakarta-sans leading-normal uppercase text-headline-3 font-700 leading-[130%] text-center text-white"
@@ -14,7 +14,7 @@ exports[`ChooseStep View should match snapshot 1`] = `
       class="container mx-auto"
     >
       <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-6 my-32"
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12 md:my-32"
       />
       <div
         class="flex justify-center"

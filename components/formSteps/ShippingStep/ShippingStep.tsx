@@ -29,7 +29,7 @@ const ShippingStep = () => {
     <div className="flex flex-col items-center md:h-screen h-auto justify-center">
       <div className="container mx-auto">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col md:flex-row gap-10 m-2 md:m-0">
             <div className="basis-2/3">
               <Heading
                 text="Shipping Details"
