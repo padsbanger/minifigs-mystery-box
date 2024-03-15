@@ -8,6 +8,7 @@ export type MinifigsStore = {
   minifigs: Minifig[];
   selectedMinifig: Minifig | null;
   selectedMinifigParts: Array<MinifigPart>;
+  isError: boolean;
   getMinifigs: () => Promise<void>;
   getMinifigParts: (set_num: string) => Promise<void>;
   setCurrentStep: (step: FormSteps) => void;

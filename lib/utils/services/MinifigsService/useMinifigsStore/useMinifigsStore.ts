@@ -12,13 +12,23 @@ export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
     set({
       isLoading: true,
     });
-    const { data } = await MinifigsService.getMiniFigs();
-    set({
-      isLoading: false,
-      minifigs: data.results
-        .sort(() => Math.random() - Math.random())
-        .slice(0, 3),
-    });
+    try {
+      const { data } = await MinifigsService.getMiniFigs();
+      set({
+        isError: false,
+        isLoading: false,
+        currentStep: "CHOOSE",
+        minifigs: data.results
+          .sort(() => Math.random() - Math.random())
+          .slice(0, 3),
+      });
+    } catch (e) {
+      set({
+        isLoading: false,
+        isError: true,
+        currentStep: "WELCOME",
+      });
+    }
   },
   getMinifigParts: async (set_num: string) => {
     set({
@@ -57,6 +67,7 @@ export const useMinifigsStore = create<MinifigsStore>()((set, get) => ({
     });
   },
   isLoading: false,
+  isError: false,
   isSubmittingOrder: false,
   minifigs: [],
   selectedMinifig: null,
@@ -78,6 +89,9 @@ export const useSelectedMinifigParts = (): MinifigPart[] =>
 
 export const useCurrentStep = (): FormSteps =>
   useMinifigsStore((state) => state.currentStep);
+
+export const useIsError = (): boolean =>
+  useMinifigsStore((state) => state.isError);
 
 export const useRandomMinifigs = (): Minifig[] =>
   useMinifigsStore((state) => state.minifigs);

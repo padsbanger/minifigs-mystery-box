@@ -3,18 +3,17 @@ import Heading from "@/components/ui/Heading/Heading";
 import Image from "next/image";
 
 import {
+  useIsError,
   useIsLoadingMinifigs,
   useMinifigsStore,
 } from "@/lib/utils/services/MinifigsService/useMinifigsStore/useMinifigsStore";
 
 const WelcomeStep = () => {
   const getMinifigs = useMinifigsStore((state) => state.getMinifigs);
-  const setCurrentStep = useMinifigsStore.getState().setCurrentStep;
   const isLoading = useIsLoadingMinifigs();
 
   const handleStart = async () => {
     await getMinifigs();
-    setCurrentStep("CHOOSE");
   };
 
   return (
